@@ -1,7 +1,7 @@
-// Import stylesheets
 import './style.css';
-import 'phaser'
 
-// Write Javascript code!
-const appDiv = document.getElementById('app');
+import 'phaser';
+import './game.js';
+
+
 
