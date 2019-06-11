@@ -1,0 +1,8 @@
+{
+  "name": "js-w9jk2j",
+  "version": "0.0.0",
+  "private": true,
+  "dependencies": {
+    "phaser": "^3.17.0"
+  }
+}
