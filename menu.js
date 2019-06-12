@@ -4,18 +4,6 @@ class menu extends Phaser.Scene {
   }
 }
 
-function init() {
-
-}
-
-function preload() {
-
-}
-
 function create() {
-
-}
-
-function update() {
-  
+  this.add.text(20, 20, "Loading Screen")
 }
