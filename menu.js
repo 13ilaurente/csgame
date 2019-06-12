@@ -1,9 +1,8 @@
 class menu extends Phaser.Scene {
   constructor() {
-    super("bootGame")
+    super("bootGame");
   }
-}
-
-function create() {
-  this.add.text(20, 20, "Loading Screen")
+  create() {
+    this.add.text(20, 20, "Loading game...");
+  }
 }
