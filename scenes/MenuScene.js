@@ -3,7 +3,7 @@ class MenuScene extends Phaser.Scene {
     super({key: 'MenuScene'});
   }
   preload() {
-    this.load.image('background', 'https://stackblitz.com/files/csgame/github/13ilaurente/csgame/master/assests/forest-background.png'
+    this.load.image('background', 'https://uploads.codesandbox.io/uploads/user/7bc1ff08-21d4-423d-a502-2f6a7608d4ae/U0mz-forest-background.png'
     );
   }
   create() {
