@@ -9,7 +9,7 @@ class MenuScene extends Phaser.Scene {
   create() {
     this.background = this.add.image(0, 0, "background");
     this.background.setOrigin(0,0);
-    this.add.text(20, 20, "Loading game...");
+    this.background.setScale(2);
   }
 }
 
