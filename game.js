@@ -1,6 +1,6 @@
 import MenuScene from './scenes/MenuScene';
 
-let config = {
+const config = {
   type: Phaser.AUTO,
   width: 816,
   height: 480,
