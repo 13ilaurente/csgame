@@ -12,10 +12,10 @@ export default class MenuScene extends Phaser.Scene {
     this.background.setOrigin(0, 0);
     this.background.setScale(3);
 
-    this.playButton = this.add.sprite(100, 200, 'playButton').setInteractive();
+    this.playButton = this.add.sprite(400, 200, 'playButton').setInteractive();
     this.playButton.setScale(4)
 
-    this.gameButton.on('pointerdown', function (pointer) {
+    this.playButton.on('pointerdown', function (pointer) {
       this.scene.start('Game');
     }.bind(this));
   }
