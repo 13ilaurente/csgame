@@ -2,8 +2,8 @@ import menuScene from './scenes/menuScene';
 
 const config = {
   type: Phaser.AUTO,
-  width: 272, /* 816 */
-  height: 160, /* 480 */
+  width: 272, 
+  height: 160, 
   scene: [ menuScene ]
 };
 
