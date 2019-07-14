@@ -4,9 +4,9 @@ export default class gameScene extends Phaser.Scene {
   }
 
   create() {
-    this.background = this.add.image(0, 0, "background");
+    this.background = this.add.image(0, -50, "background");
     this.background.setOrigin(0, 0);
 
-    this.scene.launch('UIScene');
+    this.scene.launch('uiScene');
   }
 }
