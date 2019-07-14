@@ -18,5 +18,16 @@ export default class menuScene extends Phaser.Scene {
     this.playButton.on('pointerdown', function (pointer) {
       this.scene.start('gameScene');
     }.bind(this));
+    
+    // Fullscreen button // 
+    /*
+    gameObject.setInteractive().on('pointerdown', function() {
+    if (scene.scale.isFullscreen) {
+        scene.scale.stopFullscreen();
+    } else {
+        scene.scale.startFullscreen();
+    }
+    });
+    */
   }
 }

@@ -1,7 +1,7 @@
 import './style.css';
 
 import 'phaser';
-import './game.js';
+import './config.js';
 
 
 
