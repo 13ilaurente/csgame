@@ -7,11 +7,11 @@ export default class uiScene extends Phaser.Scene {
     this.graphics = this.add.graphics();
     this.graphics.lineStyle(1, 0xffffff);
     this.graphics.fillStyle(0x783F04, 1);
-    this.graphics.strokeRect(1, 110, 90, 100);
-    this.graphics.fillRect(1, 110, 90, 100);
-    this.graphics.strokeRect(93, 110, 90, 100);
-    this.graphics.fillRect(93, 110, 90, 100);
-    this.graphics.strokeRect(185, 110, 130, 100);
-    this.graphics.fillRect(185, 110, 130, 100);
+    this.graphics.strokeRect(1, 110, 80, 50);
+    this.graphics.fillRect(1, 110, 80, 50);
+    this.graphics.strokeRect(83, 110, 120, 50);
+    this.graphics.fillRect(83, 110, 120, 50);
+    this.graphics.strokeRect(201, 110, 70, 50);
+    this.graphics.fillRect(201, 110, 70, 50);
   }
 }
