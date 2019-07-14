@@ -5,7 +5,8 @@ import gameScene from './scenes/game';
 import uiScene from './scenes/ui';
 
 const config = {
-  type: Phaser.AUTO,
+  mode: Phaser.Scale.NONE,
+  autoCenter: Phaser.Scale.CENTER_BOTH,
   width: 272,
   height: 160,
   scene: [preloaderScene, menuScene, optionsScene, gameScene, uiScene]
