@@ -7,7 +7,7 @@ const config = {
   type: Phaser.AUTO,
   width: 272,
   height: 160,
-  scene: [preloaderScene, menuScene, gameScene, uiScene]
+  scene: [preloaderScene, menuScene, optionsScene, gameScene, uiScene]
 };
 
 let game = new Phaser.Game(config);
