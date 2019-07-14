@@ -1,5 +1,6 @@
 import preloaderScene from './scenes/preloader';
 import menuScene from './scenes/menu';
+import optionsScene from './scenes/options';
 import gameScene from './scenes/game';
 import uiScene from './scenes/ui';
 
