@@ -7,6 +7,7 @@ export default class gameScene extends Phaser.Scene {
     this.background = this.add.image(0, -50, "forest-background");
     this.background.setOrigin(0, 0);
 
+    /*
     this.anims.create({
       key: 'idle1',
       frames: [
@@ -20,6 +21,7 @@ export default class gameScene extends Phaser.Scene {
     });
 
     this.add.sprite(25, 90, 'playerIdle1').play('idle1');
+    */
 
     this.scene.launch('uiScene');
   }

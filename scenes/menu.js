@@ -4,7 +4,7 @@ export default class menuScene extends Phaser.Scene {
   }
 
   create() {
-    //backgroundImage//
+    // Background image //
     this.background = this.add.image(0, 0, "mountain-background");
     this.background.setOrigin(0, 0);
 
@@ -18,7 +18,7 @@ export default class menuScene extends Phaser.Scene {
     this.playButton.on('pointerdown', function (pointer) {
       this.scene.start('gameScene');
     }.bind(this));
-    
+
     // Fullscreen button // 
     /*
     gameObject.setInteractive().on('pointerdown', function() {
@@ -29,5 +29,18 @@ export default class menuScene extends Phaser.Scene {
     }
     });
     */
+
+    // Player animation //
+    this.anims.create({
+      key: 'fall',
+      frames: [
+        { key: 'playerFall0', frame: null },
+        { key: 'playerFall1', frame: null }
+      ],
+      frameRate: 8,
+      repeat: -1
+    });
+
+    this.add.sprite(130, 50, 'playerFall0').play('fall');
   }
 }

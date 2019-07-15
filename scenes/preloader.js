@@ -10,10 +10,8 @@ export default class preloaderScene extends Phaser.Scene {
 
     this.load.image('playButton', 'https://cdn.jsdelivr.net/gh/13ilaurente/csgame@master/assests/buttons/play.png');
 
-    this.load.image('playerIdle1', 'https://cdn.jsdelivr.net/gh/13ilaurente/csgame@master/assests/sprites/sprites/Player/adventurer/Individual%20Sprites/adventurer-idle-00.png');
-    this.load.image('playerIdle2', 'https://cdn.jsdelivr.net/gh/13ilaurente/csgame@master/assests/sprites/sprites/Player/adventurer/Individual%20Sprites/adventurer-idle-01.png');
-    this.load.image('playerIdle3', 'https://cdn.jsdelivr.net/gh/13ilaurente/csgame@master/assests/sprites/sprites/Player/adventurer/Individual%20Sprites/adventurer-idle-02.png');
-    this.load.image('playerIdle4', 'https://cdn.jsdelivr.net/gh/13ilaurente/csgame@master/assests/sprites/sprites/Player/adventurer/Individual%20Sprites/adventurer-idle-03.png');
+    this.load.image('playerFall0', 'https://cdn.jsdelivr.net/gh/13ilaurente/csgame@master/assests/sprites/Player/adventurer/Individual%20Sprites/adventurer-fall-00.png');
+    this.load.image('playerFall1', 'https://cdn.jsdelivr.net/gh/13ilaurente/csgame@master/assests/sprites/Player/adventurer/Individual%20Sprites/adventurer-fall-01.png');
   }
 
   update() {
