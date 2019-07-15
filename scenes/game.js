@@ -21,7 +21,6 @@ export default class gameScene extends Phaser.Scene {
 
     this.add.sprite(25, 90, 'playerIdle1').play('idle1');
 
-
     this.scene.launch('uiScene');
   }
 }
