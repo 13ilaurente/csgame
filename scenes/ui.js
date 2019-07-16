@@ -13,5 +13,6 @@ export default class uiScene extends Phaser.Scene {
     this.graphics.fillRect(83, 110, 120, 50);
     this.graphics.strokeRect(201, 110, 70, 50);
     this.graphics.fillRect(201, 110, 70, 50);
+
   }
 }
