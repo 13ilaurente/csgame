@@ -9,6 +9,7 @@ export default class preloaderScene extends Phaser.Scene {
     this.load.image('mountain-background', 'https://cdn.jsdelivr.net/gh/13ilaurente/csgame@master/assets/backgrounds/mountain-background.png');
 
     this.load.image('playButton', 'https://cdn.jsdelivr.net/gh/13ilaurente/csgame@master/assets/buttons/play.png');
+    this.load.image('optionButton', 'https://cdn.jsdelivr.net/gh/13ilaurente/csgame@master/assets/buttons/option.png');
 
     this.load.image('playerFall0', 'https://cdn.jsdelivr.net/gh/13ilaurente/csgame@master/assets/sprites/player/individual%20sprites/adventurer-fall-00.png');
     this.load.image('playerFall1', 'https://cdn.jsdelivr.net/gh/13ilaurente/csgame@master/assets/sprites/player/individual%20sprites/adventurer-fall-01.png');

@@ -19,6 +19,12 @@ export default class menuScene extends Phaser.Scene {
       this.scene.start('gameScene');
     }.bind(this));
 
+    this.optionButton = this.add.sprite(136, 110, 'optionButton');
+
+    this.optionButton.on('pointerdown', function (pointer) {
+      this.scene.start('optionsScene');
+    }.bind(this));
+
     // Fullscreen button // 
     /*
     gameObject.setInteractive().on('pointerdown', function() {
