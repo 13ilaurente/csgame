@@ -46,5 +46,14 @@ export default class menuScene extends Phaser.Scene {
     });
 
     this.add.sprite(132, 50, 'playerFall0').play('fall');
+    
+    this.anims.create({
+      key: 'test',
+      frames: this.anims.generateFrameNames('player', {start: 22, end: 23}),
+      frameRate: 8,
+      repeat: -1
+    });
+    this.add.sprite(132, 140, 'player').play('test');
   }
 }
+
