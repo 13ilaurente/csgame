@@ -5,12 +5,9 @@ export default class menuScene extends Phaser.Scene {
 
   create() {
     // Background image //
+    /*
     this.background = this.add.image(0, 0, "mountain-background");
-    this.background.setOrigin(0, 0);
-
-    // Grid to scale sprites //
-    /*this.aGrid = new AlignGrid({scene:this,rows:11,cols:11});
-    this.aGrid.showNumbers();*/
+    this.background.setOrigin(0, 0); 
 
     // Play button to start game //
     this.playButton = this.add.sprite(136, 80, 'playButton').setInteractive();
@@ -46,7 +43,10 @@ export default class menuScene extends Phaser.Scene {
     });
 
     this.add.sprite(132, 50, 'playerFall0').play('fall');
-    
+  }
+}
+
+/*
     this.anims.create({
       key: 'test',
       frames: this.anims.generateFrameNames('player', {start: 22, end: 23}),
@@ -54,6 +54,4 @@ export default class menuScene extends Phaser.Scene {
       repeat: -1
     });
     this.add.sprite(132, 140, 'player').play('test');
-  }
-}
-
+*/
