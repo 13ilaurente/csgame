@@ -5,7 +5,6 @@ export default class menuScene extends Phaser.Scene {
 
   create() {
     // Background image //
-    /*
     this.background = this.add.image(0, 0, "mountain-background");
     this.background.setOrigin(0, 0); 
 
@@ -39,7 +38,7 @@ export default class menuScene extends Phaser.Scene {
       repeat: -1
     });
     
-    this.add.sprite(132, 140, 'player').play('fall');
+    this.add.sprite(132, 50, 'player').play('fall');
   }
 }
 
