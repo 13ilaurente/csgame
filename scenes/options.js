@@ -12,5 +12,15 @@ export default class optionsScene extends Phaser.Scene {
     this.homeButton.on('pointerdown', function (pointer) {
       this.scene.start('menuScene');
     }.bind(this));
+
+    // Fullscreen button // 
+    this.fullscreenText = this.add.text(90, 110, 'Fullscreen').setInteractive();
+    this.fullscreenText.on('pointerdown', function (pointer) {
+    if(this.scale.isFullscreen) {
+        this.scale.stopFullscreen();
+    } else {
+        this.scale.startFullscreen();
+    }
+    });
   }
 }
