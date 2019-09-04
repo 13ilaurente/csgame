@@ -15,12 +15,13 @@ export default class optionsScene extends Phaser.Scene {
 
     // Fullscreen button // 
     this.fullscreenText = this.add.text(90, 110, 'Fullscreen').setInteractive();
-    this.fullscreenText.on('pointerdown', function (pointer) {
-    if(this.scale.isFullscreen) {
-        this.scale.stopFullscreen();
-    } else {
-        this.scale.startFullscreen();
-    }
+    this.fullscreenText.on('pointerdown', function () {
+      this.scale.toggleFullscreen();
+      if (this.scale.isFullscreen) {
+        // On start fulll screen
+      } else {
+        // On stop fulll screen
+      }
     });
   }
 }
