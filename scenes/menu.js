@@ -3,6 +3,16 @@ export default class menuScene extends Phaser.Scene {
     super({ key: 'menuScene' });
   }
 
+  preload() {
+    // Player fall animation //
+    this.anims.create({
+      key: 'playerFall', // name of animation
+      frames: this.anims.generateFrameNames('player', {start: 22, end: 23}),
+      frameRate: 8,
+      repeat: -1
+    });
+  }
+
   create() {
     // Background image //
     this.background = this.add.image(0, 0, "mountain-background");
@@ -19,15 +29,9 @@ export default class menuScene extends Phaser.Scene {
       this.scene.start('optionsScene');
     }.bind(this));
 
-    // Player animation //
-    this.anims.create({
-      key: 'fall',
-      frames: this.anims.generateFrameNames('player', {start: 22, end: 23}),
-      frameRate: 8,
-      repeat: -1
-    });
-    
-    this.add.sprite(132, 50, 'player').play('fall');
+    // Play fall animation //
+    this.add.sprite(132, 50, 'player').play('playerFall');
   }
+
 }
 

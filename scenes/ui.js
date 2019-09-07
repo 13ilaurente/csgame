@@ -26,4 +26,5 @@ export default class uiScene extends Phaser.Scene {
       this.scene.start('optionsScene');
     }.bind(this));
   }
+  
 }

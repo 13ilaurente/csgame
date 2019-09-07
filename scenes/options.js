@@ -4,7 +4,7 @@ export default class optionsScene extends Phaser.Scene {
   }
 
   create() {
-    // background tinted //
+    // background tinted based on what scene it was accessed from //
     this.background = this.add.image(0, 0, "mountain-background").setTint(0x336666);
     this.background.setOrigin(0, 0);
 
@@ -13,15 +13,16 @@ export default class optionsScene extends Phaser.Scene {
       this.scene.start('menuScene');
     }.bind(this));
 
-    // Fullscreen button // 
+    // Fullscreen button //
     this.fullscreenText = this.add.text(90, 110, 'Fullscreen').setInteractive();
     this.fullscreenText.on('pointerdown', function () {
-      this.scale.toggleFullscreen();
       if (this.scale.isFullscreen) {
-        // On start fulll screen
+        this.scale.stopFullscreen();
       } else {
-        // On stop fulll screen
+        this.scale.startFullscreen();
       }
-    });
+    }, this);
+
   }
+
 }

@@ -7,6 +7,7 @@ export default class gameScene extends Phaser.Scene {
     this.background = this.add.image(0, -50, "forest-background");
     this.background.setOrigin(0, 0);
 
-    this.scene.launch('uiScene');
+    this.scene.launch('uiScene'); // runs ui scene simultaneously 
   }
+
 }
