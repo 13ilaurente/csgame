@@ -18,8 +18,10 @@ export default class optionsScene extends Phaser.Scene {
     this.fullscreenText.on('pointerdown', function () {
       if (this.scale.isFullscreen) {
         this.scale.stopFullscreen();
+        //this.scale.resize(272, 160);
       } else {
         this.scale.startFullscreen();
+        //this.scale.resize(window.innerWidth, window.innerHeight);
       }
     }, this);
 

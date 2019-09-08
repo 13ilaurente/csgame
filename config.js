@@ -5,10 +5,13 @@ import gameScene from './scenes/game';
 import uiScene from './scenes/ui';
 
 const config = {
-  mode: Phaser.Scale.ENVELOP,
-  autoCenter: Phaser.Scale.CENTER_HORIZONTALLY,
-  width: 272,
-  height: 160,
+  type: Phaser.AUTO,
+    scale: {
+        mode: Phaser.Scale.FIT,
+        autoCenter: Phaser.Scale.CENTER_HORIZONTALLY,
+        width: 272,
+        height: 160
+    },
   scene: [preloaderScene, menuScene, optionsScene, gameScene, uiScene]
 };
 
