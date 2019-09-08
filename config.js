@@ -12,6 +12,7 @@ const config = {
         width: 272,
         height: 160
     },
+  pixelArt: true,
   scene: [preloaderScene, menuScene, optionsScene, gameScene, uiScene]
 };
 
