@@ -8,7 +8,7 @@ export default class optionsScene extends Phaser.Scene {
     this.background = this.add.image(0, 0, "mountain-background").setTint(0x336666);
     this.background.setOrigin(0, 0);
 
-    this.homeButton = this.add.sprite(136, 80, 'homeButton').setInteractive().setFrame(4);
+    this.homeButton = this.add.sprite(138, 76, 'homeButton').setInteractive().setFrame(4);
     this.homeButton.on('pointerdown', function (pointer) {
       this.scene.start('menuScene');
     }.bind(this));

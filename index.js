@@ -1,6 +1,6 @@
 import './style.css';
 
-// import 'phaser';
+import 'phaser';
 import './config.js';
 
 
