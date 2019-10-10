@@ -14,17 +14,18 @@ export default class optionsScene extends Phaser.Scene {
     }.bind(this));
 
     // Fullscreen button //
-    this.fullScreenButton = this.add.sprite(90, 110, 'menuSpriteSheet').setInteractive().setFrame(3);
+    this.fullScreenButton = this.add.sprite(139, 110, 'menuSpriteSheet').setInteractive().setFrame(3);
     this.fullScreenButton.on('pointerdown', function () {
       if (this.scale.isFullscreen) {
         this.scale.stopFullscreen();
-        //this.scale.resize(272, 160);
+        this.fullScreenButton.setFrame(3);
       } else {
         this.scale.startFullscreen();
-        //this.scale.resize(window.innerWidth, window.innerHeight);
+        this.fullScreenButton.setFrame(6);   
       }
     }, this);
-
   }
-
 }
+
+//this.scale.resize(272, 160);
+//this.scale.resize(window.innerWidth, window.innerHeight);
