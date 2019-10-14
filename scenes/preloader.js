@@ -14,7 +14,7 @@ export default class preloaderScene extends Phaser.Scene {
     this.load.image('homeButton', 'https://cdn.jsdelivr.net/gh/13ilaurente/csgame@master/assets/buttons/home%20button.png');
     */
 
-    this.load.spritesheet('menuSpriteSheet', 'https://cdn.jsdelivr.net/gh/13ilaurente/csgame@master/assets/buttons/menu_buttons.png', {frameWidth: 30, frameHeight: 20.2});
+    this.load.spritesheet('menuSpriteSheet', 'https://cdn.jsdelivr.net/gh/13ilaurente/csgame@master/assets/buttons/menu.png', {frameWidth: 28, frameHeight: 21});
 
     this.load.spritesheet('player', 'https://cdn.jsdelivr.net/gh/13ilaurente/csgame@master/assets/sprites/player/adventurer.png', {frameWidth: 50, frameHeight: 37});
   }
