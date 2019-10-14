@@ -24,7 +24,7 @@ export default class menuScene extends Phaser.Scene {
       this.scene.start('gameScene');
     }.bind(this));
     
-    this.optionButton = this.add.sprite(139, 110, 'menuSpriteSheet').setInteractive().setFrame(4);
+    this.optionButton = this.add.sprite(138, 110, 'menuSpriteSheet').setInteractive().setFrame(4);
     this.optionButton.on('pointerover', function (pointer) {
       console.log('It is working');
       //this.optionHelp = this.add.text(100, 200, 'Phaser');
