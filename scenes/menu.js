@@ -21,7 +21,7 @@ export default class menuScene extends Phaser.Scene {
     // Play button to start game //
     this.playButton = this.add.sprite(136, 80, 'menuSpriteSheet').setInteractive();
     this.playButton.on('pointerdown', function (pointer) {
-      this.scene.start('gameScene');
+      this.scene.switch('gameScene');
     }.bind(this));
     
     this.optionButton = this.add.sprite(138, 110, 'menuSpriteSheet').setInteractive().setFrame(4);
@@ -30,7 +30,7 @@ export default class menuScene extends Phaser.Scene {
       //this.optionHelp = this.add.text(100, 200, 'Phaser');
     });
     this.optionButton.on('pointerdown', function (pointer) {
-      this.scene.start('optionsScene');
+      this.scene.switch('optionsScene');
     }.bind(this));
 
     // Play fall animation //

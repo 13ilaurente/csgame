@@ -10,7 +10,7 @@ export default class optionsScene extends Phaser.Scene {
 
     this.homeButton = this.add.sprite(136, 76, 'menuSpriteSheet').setInteractive().setFrame(8);
     this.homeButton.on('pointerdown', function (pointer) {
-      this.scene.start('menuScene');
+      this.scene.switch('menuScene');
     }.bind(this));
 
     // Fullscreen button //
