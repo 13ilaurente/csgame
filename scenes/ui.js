@@ -17,13 +17,13 @@ export default class uiScene extends Phaser.Scene {
     this.homeButton = this.add.sprite(255, 123, 'menuSpriteSheet').setInteractive().setFrame(8);
     this.homeButton.on('pointerdown', function (pointer) {
       this.scene.sleep('gameScene');
-      this.scene.start('menuScene');
+      this.scene.switch('menuScene');
     }.bind(this));
 
     this.optionButton = this.add.sprite(256, 145, 'menuSpriteSheet').setInteractive().setFrame(4);
     this.optionButton.on('pointerdown', function (pointer) {
       this.scene.sleep('gameScene');
-      this.scene.start('optionsScene');
+      this.scene.switch('optionsScene')
     }.bind(this));
   }
   
