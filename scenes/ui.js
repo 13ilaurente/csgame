@@ -11,8 +11,8 @@ export default class uiScene extends Phaser.Scene {
     this.graphics.fillRect(1, 111, 85, 50);
     this.graphics.strokeRect(83, 110, 150, 50);
     this.graphics.fillRect(83, 111, 150, 50);
-    this.graphics.strokeRect(231, 110, 71, 50);
-    this.graphics.fillRect(231, 111, 70, 50);
+    this.graphics.strokeRect(231, 110, 41, 50);
+    this.graphics.fillRect(231, 111, 40, 50);
 
     this.homeButton = this.add.sprite(255, 123, 'menuSpriteSheet').setInteractive().setFrame(8);
     this.homeButton.on('pointerdown', function (pointer) {
