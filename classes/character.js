@@ -1,5 +1,5 @@
 export default class character extends Phaser.GameObjects.Sprite {
-  constructor() {
-    super(scene, x, y, hp)
+  constructor(scene: Phaser.Scene, x: number, y: number, hp: number, texture: string, frame: string | number) {
+    super(scene, x, y, hp, mana, texture, frame)
   }
 }
