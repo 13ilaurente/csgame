@@ -1,6 +1,6 @@
 import sprite from '../classes/sprite'
 
-export default class gameScene extends Phaser.Scene {
+export default class gameScene extends Phaser.GameObjects.Sprite {
   constructor() {
     super({ key: 'gameScene' });
   }
@@ -9,6 +9,6 @@ export default class gameScene extends Phaser.Scene {
     this.background = this.add.image(0, -50, "forest-background");
     this.background.setOrigin(0, 0);
 
-    this.player = new sprite(this, 100, 100, 100, 100, 'player', 23)
+    let player = new Player({scene: this, x: 100, y: 100, hp: 100, mana: 100, texture: 'player', frame: 23});
   }
 }
