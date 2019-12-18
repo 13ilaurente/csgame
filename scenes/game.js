@@ -1,6 +1,6 @@
 import sprite from '../classes/sprite'
 
-export default class gameScene extends Phaser.GameObjects.Sprite {
+export default class gameScene extends Phaser.Scene {
   constructor() {
     super({ key: 'gameScene' });
   }
