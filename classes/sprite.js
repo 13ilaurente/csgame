@@ -1,8 +1,6 @@
 export default class sprite extends Phaser.GameObjects.Sprite {
   constructor(scene, x, y) {
-    super(scene, x, y);
-    this.setTexture("playerFall");
-    this.setPosition(x, y);
+    this.scene = scene;
   }
   /*
   constructor(config) {

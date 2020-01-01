@@ -1,0 +1,17 @@
+import sprite from '../classes/sprite.js';
+
+export default class player extends Phaser.GameObjects.Sprite {
+  constructor(scene, x, y, hp, mana) {
+    super(scene, x, y, hp, mana,);
+
+    this.setTexture('player');
+    this.setFrame(1);
+    this.setPosition(x, y);
+  }
+  /*
+  constructor(config) {
+    super(config.scene, config.x, config.y, config.hp, config.mana, config.texture, config.frame, config.key)
+    config.scene.add.existing(this);
+  }
+  */
+}
