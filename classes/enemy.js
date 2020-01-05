@@ -6,7 +6,6 @@ export default class enemy extends Phaser.GameObjects.Sprite {
 
     this.setTexture('slime');
     this.setFrame(1);
-    //this.flipX = true;
     this.setPosition(x, y);
   }
 }
