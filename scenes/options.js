@@ -15,7 +15,7 @@ export default class optionsScene extends Phaser.Scene {
 
     // Fullscreen button 
     this.fullScreenButton = this.add.sprite(138, 110, 'menuSpriteSheet').setInteractive().setFrame(6);
-    this.fullScreenButton.on('pointerdown', function () {
+    this.fullScreenButton.on('pointerdown', function (pointer) {
       if (this.scale.isFullscreen) {
         this.scale.stopFullscreen();
         this.fullScreenButton.setFrame(6);

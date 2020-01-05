@@ -27,10 +27,25 @@ export default class uiScene extends Phaser.Scene {
       this.scene.switch('optionsScene')
     }.bind(this));
 
-    let attackTextButton = this.add.text(20, 120, 'ATTACK', {fontFamily: 'Arial', fontSize: 10}).setResolution(14);
-    let defendTextButton = this.add.text(19, 140, 'DEFEND', {fontFamily: 'Arial', fontSize: 10}).setResolution(14);
+    let attackTextButton = this.add.text(20, 120, 'ATTACK', {fontFamily: 'Arial', fontSize: 10}).setResolution(14).setInteractive();
 
-    let mainTextOptionsContainer = this.add.container(272, 160, [ attackTextButton, defendTextButton ]);
+    attackTextButton.on('pointerover', function (pointer) {
+        attackTextButton.setTint(0x44ff44);
+    });
+    attackTextButton.on('pointerout', function (pointer) {
+        attackTextButton.clearTint();
+    });
+
+    let defendTextButton = this.add.text(19, 140, 'DEFEND', {fontFamily: 'Arial', fontSize: 10}).setResolution(14).setInteractive();
+
+    defendTextButton.on('pointerover', function (pointer) {
+        defendTextButton.setTint(0x44ff44);
+    });
+    defendTextButton.on('pointerout', function (pointer) {
+        defendTextButton.clearTint();
+    });
+
+    //let container = this.add.container(272, 160, [ attackTextButton, defendTextButton ]);
 
   }
   
