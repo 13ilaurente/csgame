@@ -17,6 +17,8 @@ export default class preloaderScene extends Phaser.Scene {
     this.load.spritesheet('menuSpriteSheet', 'https://cdn.jsdelivr.net/gh/13ilaurente/csgame@master/assets/buttons/menu.png', {frameWidth: 28, frameHeight: 21});
 
     this.load.spritesheet('player', 'https://cdn.jsdelivr.net/gh/13ilaurente/csgame@master/assets/sprites/player/adventurer.png', {frameWidth: 50, frameHeight: 37});
+
+    this.load.spritesheet('slime', 'https://cdn.jsdelivr.net/gh/13ilaurente/csgame@master/assets/sprites/slime/slime-Sheet.png', {frameWidth: 32, frameHeight: 24})
   }
 
   update() {
