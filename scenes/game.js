@@ -1,6 +1,6 @@
 import sprite from '../classes/sprite.js';
 import player from '../classes/player.js';
-import enemy from '..classes/enemy/js';
+import enemy from '../classes/enemy.js';
 
 export default class gameScene extends Phaser.Scene {
   constructor() {
@@ -18,6 +18,6 @@ export default class gameScene extends Phaser.Scene {
     this.add.existing(new player(this, 60, 90, 100));
     //let player = new Player({scene: this, x: 100, y: 100, hp: 100, mana: 100, texture: 'player', frame: 23});
 
-    this.add.existing(new enemy(this, 170, 90, 100));
+    this.add.existing(new enemy(this, 180, 90, 100));
   }
 }
