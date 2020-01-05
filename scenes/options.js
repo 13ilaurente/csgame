@@ -4,7 +4,7 @@ export default class optionsScene extends Phaser.Scene {
   }
 
   create() {
-    // background tinted based on what scene it was accessed from //
+    // background tinted based on what scene 
     this.background = this.add.image(0, 0, "mountain-background").setTint(0x336666);
     this.background.setOrigin(0, 0);
 
@@ -13,7 +13,7 @@ export default class optionsScene extends Phaser.Scene {
       this.scene.switch('menuScene');
     }.bind(this));
 
-    // Fullscreen button //
+    // Fullscreen button 
     this.fullScreenButton = this.add.sprite(138, 110, 'menuSpriteSheet').setInteractive().setFrame(6);
     this.fullScreenButton.on('pointerdown', function () {
       if (this.scale.isFullscreen) {

@@ -4,6 +4,7 @@ export default class uiScene extends Phaser.Scene {
   }
 
   create() {
+    // 
     this.graphics = this.add.graphics();
     this.graphics.lineStyle(1, 0xffffff);
     this.graphics.fillStyle(0x783F04, 1);
@@ -25,6 +26,12 @@ export default class uiScene extends Phaser.Scene {
       this.scene.sleep('gameScene');
       this.scene.switch('optionsScene')
     }.bind(this));
+
+    let attackTextButton = this.add.text(20, 120, 'ATTACK', {fontFamily: 'Arial', fontSize: 10}).setResolution(14);
+    let defendTextButton = this.add.text(19, 140, 'DEFEND', {fontFamily: 'Arial', fontSize: 10}).setResolution(14);
+
+    let mainTextOptionsContainer = this.add.container(272, 160, [ attackTextButton, defendTextButton ]);
+
   }
   
 }
