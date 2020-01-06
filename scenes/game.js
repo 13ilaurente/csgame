@@ -31,7 +31,7 @@ export default class gameScene extends Phaser.Scene {
     //let player = new Player({scene: this, x: 100, y: 100, hp: 100, mana: 100, texture: 'player', frame: 23});
 
     let randHP = Phaser.Math.Between(25, 70);
-    let enemy = new enemy(this, 180, 90, randHP).play('slimeIdle');
+    this.add.existing(new enemy(this, 180, 90, randHP)).play('slimeIdle');
     console.log(randHP);
   }
 }
