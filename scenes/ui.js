@@ -40,7 +40,7 @@ export default class uiScene extends Phaser.Scene {
     });
     attackTextButton.on('pointerdown', function (pointer) {
         attackTextButton.setTint(0xff0000);
-        test();
+        test()
     });
 
     // Defend Button //
