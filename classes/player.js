@@ -1,7 +1,7 @@
 import sprite from '../classes/sprite.js';
 
 export default class player extends Phaser.GameObjects.Sprite {
-  constructor(scene, x, y, hp, mana) {
+  constructor(scene, x, y, hp, mana, score) {
     super(scene, x, y, hp, mana,);
 
     this.setTexture('player');
