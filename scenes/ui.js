@@ -40,10 +40,18 @@ export default class uiScene extends Phaser.Scene {
     });
     attackTextButton.on('pointerdown', function (pointer) {
         attackTextButton.setTint(0xff0000);
-        test()
+        blockButton.setVisible(false);
+        slashButton.setVisible(true);
+        fireBallButton.setVisible(true);
     });
 
-    // Defend Button //
+    // Attack options //
+    let slashButton = this.add.text(140, 120, 'SLASH', {fontFamily: 'Arial', fontSize: 10}).setResolution(14).setInteractive();
+    slashButton.setVisible(false);
+    let fireBallButton = this.add.text(132, 135, 'FIRE BALL', {fontFamily: 'Arial', fontSize: 10}).setResolution(14).setInteractive();
+    fireBallButton.setVisible(false);
+
+    // Defend button //
     let defendTextButton = this.add.text(19, 140, 'DEFEND', {fontFamily: 'Arial', fontSize: 10}).setResolution(14).setInteractive();
 
     defendTextButton.on('pointerover', function (pointer) {
@@ -52,6 +60,16 @@ export default class uiScene extends Phaser.Scene {
     defendTextButton.on('pointerout', function (pointer) {
         defendTextButton.clearTint();
     });
+    defendTextButton.on('pointerdown', function (pointer) {
+        defendTextButton.setTint(0xff0000);
+        slashButton.setVisible(false);
+        fireBallButton.setVisible(false);
+        blockButton.setVisible(true);
+    });
+
+    // Defend options //
+    let blockButton = this.add.text(140, 120, 'BLOCK', {fontFamily: 'Arial', fontSize: 10}).setResolution(14).setInteractive();
+    blockButton.setVisible(false);
 
     //let container = this.add.container(272, 160, [ attackTextButton, defendTextButton ])
   }
