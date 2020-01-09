@@ -1,3 +1,5 @@
+import player from '../classes/player.js';
+
 export default class uiScene extends Phaser.Scene {
   constructor() {
     super({ key: 'uiScene' });
@@ -66,16 +68,26 @@ export default class uiScene extends Phaser.Scene {
         fireBallButton.setVisible(false);
         blockButton.setVisible(true);
     });
-    defendTextButton.on('pointerup', test, this);
+    defendTextButton.on('pointerup', function (pointer) {
+      test1.call(this);
+    });
+    /*
+    function test1() {
+      console.log('success')
+    }
+    */
 
     // Defend options //
     let blockButton = this.add.text(140, 120, 'BLOCK', {fontFamily: 'Arial', fontSize: 10}).setResolution(14).setInteractive();
     blockButton.setVisible(false);
 
-    //let container = this.add.container(272, 160, [ attackTextButton, defendTextButton ])
   }
-  
-  test() {
-      console.log('success')
-    }
+
+/* 
+defendTextButton.on('pointerup', () => {this.test()}); <--- in create()
+
+test() {                                               <--- outside create()
+  console.log('success')
+}
+*/
 }
