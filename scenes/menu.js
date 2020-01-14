@@ -23,16 +23,18 @@ export default class menuScene extends Phaser.Scene {
     this.playButton.on('pointerdown', function (pointer) {
       this.scene.switch('gameScene');
       this.scene.launch('uiScene');
+      console.log('switched to game scene');
     }.bind(this));
     
     // Option Button to go to options //     
     this.optionButton = this.add.sprite(138, 110, 'menuSpriteSheet').setInteractive().setFrame(4);
-    this.optionButton.on('pointerover', function () {
-      console.log('It is working');
+    this.optionButton.on('pointerover', function (pointer) {
+      //console.log('It is working');
     });
 
     this.optionButton.on('pointerdown', function (pointer) {
       this.scene.switch('optionsScene');
+      console.log('switched to option scene')
     }.bind(this));
 
     // Play fall animation //

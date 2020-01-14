@@ -11,6 +11,7 @@ export default class optionsScene extends Phaser.Scene {
     this.homeButton = this.add.sprite(136, 76, 'menuSpriteSheet').setInteractive().setFrame(8);
     this.homeButton.on('pointerdown', function (pointer) {
       this.scene.switch('menuScene');
+      console.log('switched to menu scene');
     }.bind(this));
 
     // Fullscreen button //
@@ -19,9 +20,11 @@ export default class optionsScene extends Phaser.Scene {
       if (this.scale.isFullscreen) {
         this.scale.stopFullscreen();
         this.fullScreenButton.setFrame(6);
+        console.log('exited fullscreen')
       } else {
         this.scale.startFullscreen();
-        this.fullScreenButton.setFrame(7);   
+        this.fullScreenButton.setFrame(7);
+        console.log('entered fullscreen')   
       }
     }, this);
   }

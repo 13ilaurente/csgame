@@ -8,6 +8,10 @@ export default class player extends sprite {
     this.setFrame(1);
     this.setPosition(x, y);
   }
+
+  test(){
+    console.log('success');
+  }
 }
 
 /*

@@ -22,6 +22,7 @@ export default class uiScene extends Phaser.Scene {
     this.homeButton.on('pointerdown', function (pointer) {
       this.scene.sleep('gameScene');
       this.scene.switch('menuScene');
+      console.log('switched to home scene (menu)');
     }.bind(this));
 
     // Option button //
@@ -29,6 +30,7 @@ export default class uiScene extends Phaser.Scene {
     this.optionButton.on('pointerdown', function (pointer) {
       this.scene.sleep('gameScene');
       this.scene.switch('optionsScene')
+      console.log('switched to option scene');
     }.bind(this));
 
     // Attack button //
@@ -45,6 +47,7 @@ export default class uiScene extends Phaser.Scene {
         blockButton.setVisible(false);
         slashButton.setVisible(true);
         fireBallButton.setVisible(true);
+        console.log('attack selected')
     });
 
     // Attack options //
@@ -67,12 +70,16 @@ export default class uiScene extends Phaser.Scene {
         slashButton.setVisible(false);
         fireBallButton.setVisible(false);
         blockButton.setVisible(true);
+        console.log('defend selected')
     });
     defendTextButton.on('pointerup', function (pointer) {
-      test1.call(this);
+      //test.call(this);
+      //this.player.test();
+      //player.test();
     });
+    
     /*
-    function test1() {
+    function test() {
       console.log('success')
     }
     */
@@ -80,7 +87,6 @@ export default class uiScene extends Phaser.Scene {
     // Defend options //
     let blockButton = this.add.text(140, 120, 'BLOCK', {fontFamily: 'Arial', fontSize: 10}).setResolution(14).setInteractive();
     blockButton.setVisible(false);
-
   }
 
 /* 

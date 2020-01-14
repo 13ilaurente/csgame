@@ -23,6 +23,7 @@ export default class preloaderScene extends Phaser.Scene {
 
   update() {
     this.scene.start('menuScene');
+    console.log('menu scene started');
   }
   
 }
