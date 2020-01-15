@@ -1,3 +1,4 @@
+import sprite from '../classes/sprite.js';
 import player from '../classes/player.js';
 
 export default class uiScene extends Phaser.Scene {
@@ -73,11 +74,12 @@ export default class uiScene extends Phaser.Scene {
         console.log('defend selected')
     });
     defendTextButton.on('pointerup', function (pointer) {
-      //test.call(this);
+      test.call(this);
       //this.player.test();
       //player.test();
     });
     
+
     /*
     function test() {
       console.log('success')
@@ -89,8 +91,8 @@ export default class uiScene extends Phaser.Scene {
     blockButton.setVisible(false);
   }
 
-/* 
-defendTextButton.on('pointerup', () => {this.test()}); <--- in create()
+/*
+defendTextButton.on('pointerup', () => {this.test()}); <--- inside create()
 
 test() {                                               <--- outside create()
   console.log('success')

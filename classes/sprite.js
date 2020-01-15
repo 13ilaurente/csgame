@@ -1,6 +1,7 @@
 export default class sprite extends Phaser.GameObjects.Sprite {
   constructor(scene, x, y, hp) {
     super(scene, x, y, hp)
+
   }
   /*
   constructor(config) {

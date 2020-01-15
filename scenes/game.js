@@ -8,6 +8,7 @@ export default class gameScene extends Phaser.Scene {
   }
 
   preload() {
+    // Player idle animation //
     this.anims.create({
       key: 'playerIdle', // name of animation
       frames: this.anims.generateFrameNames('player', {start: 0, end: 2}),
@@ -15,6 +16,7 @@ export default class gameScene extends Phaser.Scene {
       repeat: -1
     });
 
+    // Slime idle animation //
     this.anims.create({
       key: 'slimeIdle', // name of animation
       frames: this.anims.generateFrameNames('slime', {start: 0, end: 3}),
