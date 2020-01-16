@@ -32,8 +32,8 @@ export default class gameScene extends Phaser.Scene {
 
     let my_player = new player(this, 60, 90, 100, 100);
     this.add.existing(my_player.play('playerIdle'));
+    my_player.test();
     
-    my_player.test()
     //this.add.existing(new player(this, 60, 90, 100, 100)).play('playerIdle');
 
     let randHP = Phaser.Math.Between(25, 70);
