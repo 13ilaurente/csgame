@@ -2,6 +2,8 @@ import sprite from '../classes/sprite.js';
 import player from '../classes/player.js';
 import enemy from '../classes/enemy.js';
 
+import test from '../classes/player.js';
+
 export default class gameScene extends Phaser.Scene {
   constructor() {
     super({ key: 'gameScene' });

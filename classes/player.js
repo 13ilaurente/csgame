@@ -9,7 +9,7 @@ export default class player extends sprite {
     this.setPosition(x, y);
   }
 
-  test(){
+  test() {
     console.log('success');
   }
 }
