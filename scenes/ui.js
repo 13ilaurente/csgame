@@ -73,14 +73,15 @@ export default class uiScene extends Phaser.Scene {
         blockButton.setVisible(true);
         console.log('defend selected')
     });
-    //defendTextButton.on('pointerup', () => {this.test()});
+    //my_player = new player()
+    //defendTextButton.on('pointerup', () => {this.player.test()});
     //defendTextButton.on('pointerup', pointer => this.test());
-    /*
-    defendTextButton.on('pointerup', function (pointer) {
+  
+    //defendTextButton.on('pointerup', player_obj, function (pointer) {
       //test.call(this);
-      //player.test();
-    });
-    */
+    //  player_obj.test();
+   // });
+    
 
     /*
     function test() {
@@ -101,3 +102,8 @@ test() {                                               <--- outside create()
 }
 */
 }
+
+//let my_player = new player(this, 60, 90, 100, 100);
+//let my_ui = new uiScene()
+
+//my_ui.defendTextButton('pointerup', my_player, )

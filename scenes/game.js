@@ -2,7 +2,6 @@ import sprite from '../classes/sprite.js';
 import player from '../classes/player.js';
 import enemy from '../classes/enemy.js';
 
-import test from '../classes/player.js';
 
 export default class gameScene extends Phaser.Scene {
   constructor() {
@@ -31,9 +30,15 @@ export default class gameScene extends Phaser.Scene {
     this.background = this.add.image(0, -50, "forest-background");
     this.background.setOrigin(0, 0);
 
-    this.add.existing(new player(this, 60, 90, 100, 100)).play('playerIdle');
+    let my_player = new player(this, 60, 90, 100, 100);
+    this.add.existing(my_player.play('playerIdle'));
+    
+    my_player.test()
+    //this.add.existing(new player(this, 60, 90, 100, 100)).play('playerIdle');
 
     let randHP = Phaser.Math.Between(25, 70);
     this.add.existing(new enemy(this, 180, 90, randHP)).play('slimeIdle');
+   
+
   }
 }
