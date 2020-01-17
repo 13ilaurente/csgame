@@ -72,18 +72,7 @@ export default class uiScene extends Phaser.Scene {
         fireBallButton.setVisible(false);
         blockButton.setVisible(true);
         console.log('defend selected');
-        //my_player.test();
     });
-    //my_player = new player()
-    //defendTextButton.on('pointerup', () => {this.player.test()});
-    //defendTextButton.on('pointerup', pointer => this.test());
-
-    /*
-    defendTextButton.on('pointerup', player_obj, function (pointer) {
-      test.call(this);
-      player_obj.test();
-    });
-    */
 
     // Defend options //
     let blockButton = this.add.text(140, 120, 'BLOCK', {fontFamily: 'Arial', fontSize: 10}).setResolution(14).setInteractive();

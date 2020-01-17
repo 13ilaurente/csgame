@@ -7,11 +7,10 @@ export default class player extends sprite {
     this.setTexture('player');
     this.setFrame(1);
     this.setPosition(x, y);
-    
   }
 
   test() {
-    console.log(this.hp);
+    console.log('success');
   }
 }
 
