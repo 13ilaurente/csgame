@@ -1,3 +1,4 @@
+/*
 import sprite from '../classes/sprite.js';
 import player from '../classes/player.js';
 import enemy from '../classes/enemy.js';
@@ -37,3 +38,4 @@ export default class gameScene extends Phaser.Scene {
     this.add.existing(new enemy(this, 180, 90, randHP)).play('slimeIdle');
   }
 }
+*/

@@ -1,3 +1,4 @@
+/*
 import sprite from '../classes/sprite.js';
 import player from '../classes/player.js';
 
@@ -79,3 +80,4 @@ export default class uiScene extends Phaser.Scene {
     blockButton.setVisible(false);
   }
 }
+*/

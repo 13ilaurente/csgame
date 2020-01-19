@@ -7,6 +7,8 @@ export default class player extends sprite {
     this.setTexture('player');
     this.setFrame(1);
     this.setPosition(x, y);
+    
+    this.healthDisplay();
   }
 
   test() {

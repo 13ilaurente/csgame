@@ -41,5 +41,6 @@ export default class menuScene extends Phaser.Scene {
     this.add.sprite(132, 50, 'player').play('playerFall');
   }
 
+  
 }
 
