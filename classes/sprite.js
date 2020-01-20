@@ -17,7 +17,7 @@ export default class sprite extends Phaser.GameObjects.Sprite {
     
   }
 
-  damageTaken(damage) {
+  damageTaken(damage) { 
     this.hp -= damage
   }
 }
