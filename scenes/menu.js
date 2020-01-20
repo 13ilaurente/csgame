@@ -22,7 +22,7 @@ export default class menuScene extends Phaser.Scene {
     this.playButton = this.add.sprite(136, 80, 'menuSpriteSheet').setInteractive();
     this.playButton.on('pointerdown', function (pointer) {
       this.scene.switch('gameScene');
-      this.scene.launch('uiScene');
+      //this.scene.launch('uiScene');
       console.log('switched to game scene');
     }.bind(this));
     

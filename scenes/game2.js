@@ -36,7 +36,11 @@ export default class gameScene extends Phaser.Scene {
 
     let randHP = Phaser.Math.Between(25, 70);
     let opponent = new enemy(this, 180, 90, 100, 100);
-    this.add.existing(op).play('slimeIdle');
+    this.add.existing(opponent).play('slimeIdle');
+
+    if (my_player.hp <= 0) {
+      console.log('dead')
+    }
 
 //----------------------------------------------------------------------------------------------------//
     
@@ -87,6 +91,18 @@ export default class gameScene extends Phaser.Scene {
     // Attack options //
     let slashButton = this.add.text(140, 120, 'SLASH', {fontFamily: 'Arial', fontSize: 10}).setResolution(14).setInteractive();
     slashButton.setVisible(false);
+    slashButton.on('pointerover', function (pointer) {
+        slashButton.setTint(0x44ff44);
+    });
+    slashButton.on('pointerout', function (pointer) {
+        slashButton.clearTint();
+    });
+    slashButton.on('pointerdown', function (pointer) {
+        slashButton.setTint(0xff0000);
+        console.log(my_player.slash());
+        console.log('slash sleceted');
+    });
+
     let fireBallButton = this.add.text(132, 135, 'FIRE BALL', {fontFamily: 'Arial', fontSize: 10}).setResolution(14).setInteractive();
     fireBallButton.setVisible(false);
 

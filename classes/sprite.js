@@ -1,3 +1,6 @@
+import player from '../classes/player.js';
+import enemy from '../classes/enemy.js';
+
 export default class sprite extends Phaser.GameObjects.Sprite {
   constructor(scene, x, y, hp) {
     super(scene, x, y, hp)
@@ -12,10 +15,6 @@ export default class sprite extends Phaser.GameObjects.Sprite {
     health.setText('test')
   }
   */
-
-  damageDealt(damage) {
-    
-  }
 
   damageTaken(damage) { 
     this.hp -= damage
