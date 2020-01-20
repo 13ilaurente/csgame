@@ -1,6 +1,6 @@
 import sprite from '../classes/sprite.js';
 
-export default class player extends sprite {
+export default class enemy extends sprite {
   constructor(scene, x, y, hp) {
     super(scene, x, y, hp)
 

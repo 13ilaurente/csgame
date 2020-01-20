@@ -6,9 +6,19 @@ export default class sprite extends Phaser.GameObjects.Sprite {
     this.hp = hp;
   }
 
+  /*
   healthDisplay(hp) {
     let health;
     health.setText('test')
+  }
+  */
+
+  damageDealt(damage) {
+    
+  }
+
+  damageTaken(damage) {
+    this.hp -= damage
   }
 }
 

@@ -8,11 +8,11 @@ export default class player extends sprite {
     this.setFrame(1);
     this.setPosition(x, y);
     
-    this.healthDisplay();
+    //this.healthDisplay();
   }
 
-  test() {
-    console.log('success');
+  slash() {
+    
   }
 }
 

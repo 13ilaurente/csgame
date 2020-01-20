@@ -35,7 +35,8 @@ export default class gameScene extends Phaser.Scene {
     this.add.existing(my_player).play('playerIdle');
 
     let randHP = Phaser.Math.Between(25, 70);
-    this.add.existing(new enemy(this, 180, 90, randHP)).play('slimeIdle');
+    let opponent = new enemy(this, 180, 90, 100, 100);
+    this.add.existing(op).play('slimeIdle');
 
 //----------------------------------------------------------------------------------------------------//
     
