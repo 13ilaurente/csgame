@@ -38,9 +38,7 @@ export default class gameScene extends Phaser.Scene {
     let opponent = new enemy(this, 180, 90, 100, 100);
     this.add.existing(opponent).play('slimeIdle');
 
-    if (my_player.hp <= 0) {
-      console.log('dead')
-    }
+    console.log(my_player.alive)
 
 //----------------------------------------------------------------------------------------------------//
     

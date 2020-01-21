@@ -1,3 +1,13 @@
+class HealthBar extends Phaser.GameObjects.Sprite {
+  constructor(scene, x, y) {
+    super(scene, x, y);
+    this.x = x;
+    this.y = y;
+    this.hp = hp;
+    scene.add.existing(this);
+  }
+}
+
 /*
 export default class healthDisplay {
   constructor(scene, x, y) {

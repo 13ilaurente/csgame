@@ -8,14 +8,12 @@ export default class player extends sprite {
     this.setFrame(1);
     this.setPosition(x, y);
 
-    //this.healthDisplay();
+    this.alive = true;
   }
-
+  
   slash() {
     let slash_damage = 30;
-    return function() {
-      damageTaken(slash_damage);
-    };
+    damageTaken.apply(slash_damage);
   }
 }
 
