@@ -2,7 +2,7 @@ import sprite from "../classes/sprite.js";
 
 export default class player extends sprite {
   constructor(scene, x, y, hp, mana) {
-    super(scene, x, y, hp, mana);
+    super(scene, x, y, hp, 'user', mana);
 
     this.setTexture("player");
     this.setFrame(1);
@@ -13,7 +13,7 @@ export default class player extends sprite {
   
   slash() {
     let slash_damage = 30;
-    damageTaken.apply(slash_damage);
+    player.damageTaken(slash_damage);
   }
 }
 

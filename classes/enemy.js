@@ -2,7 +2,7 @@ import sprite from '../classes/sprite.js';
 
 export default class enemy extends sprite {
   constructor(scene, x, y, hp) {
-    super(scene, x, y, hp)
+    super(scene, x, y, hp, 'enemy')
 
     this.setTexture('slime');
     this.setFrame(1);
