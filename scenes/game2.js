@@ -31,21 +31,17 @@ export default class gameScene extends Phaser.Scene {
     this.background = this.add.image(0, -50, "forest-background");
     this.background.setOrigin(0, 0);
 
-    let user =[];
+    let user = [];
     let enemies = [];
 
     let my_player = new player(this, 60, 90, 100, 100);
-    //this.add.existing(my_player).play('playerIdle');
     user.push(my_player);
 
     let randHP = Phaser.Math.Between(25, 70);
     let opponent = new enemy(this, 180, 90, randHP, 100);
-    //this.add.existing(opponent).play('slimeIdle');
     enemies.push(opponent);
-
+    
     console.log('player alive check:' + my_player.alive);
-    console.log(my_player.type);
-    console.log(opponent.type);
     console.log(user);
     console.log(enemies);
 

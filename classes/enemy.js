@@ -4,10 +4,11 @@ export default class enemy extends sprite {
   constructor(scene, x, y, hp) {
     super(scene, x, y, hp, 'enemy')
 
-    this.setTexture('slime');
-    this.setFrame(1);
+    scene.add.existing(this);
+    this.setTexture("slime");
+    this.play('slimeIdle');
     this.setPosition(x, y);
-    scene.add.existing(this).play('slimeIdle');
+    
     this.alive = true;
   }
 }

@@ -1,5 +1,6 @@
-import player from "../classes/player.js";
-import enemy from "../classes/enemy.js";
+import player from '../classes/player.js';
+import enemy from '../classes/enemy.js';
+import { user, enemies } from '../scenes/game2.js';
 
 export default class sprite extends Phaser.GameObjects.Sprite {
   constructor(scene, x, y, hp, type) {
@@ -13,8 +14,9 @@ export default class sprite extends Phaser.GameObjects.Sprite {
   damageDone(amount) {
     this.hp -= amount;
   }
-
+  
   damage(dmg) {
+    let dmg = slash();
     var target = this.type === "user" ? enemies : user;
 
     if (target && this.alive) {

@@ -4,16 +4,18 @@ export default class player extends sprite {
   constructor(scene, x, y, hp, mana) {
     super(scene, x, y, hp, 'user', mana);
 
+    scene.add.existing(this);
     this.setTexture("player");
-    this.setFrame(1);
+    this.play('playerIdle');
     this.setPosition(x, y);
-    scene.add.existing(this).play('playerIdle');;
+    
     this.alive = true;
   }
-  
-  slash() {
+
+  slash(dmg) {
     let slash_damage = 30;
-    return player.damage(slash_damage);
+    return slash_damage;
+    console.log(damage);
   }
 }
 
