@@ -13,7 +13,7 @@ export default class player extends sprite {
   
   slash() {
     let slash_damage = 30;
-    player.damage(slash_damage);
+    return player.damage(slash_damage);
   }
 }
 
