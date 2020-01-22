@@ -7,6 +7,7 @@ export default class enemy extends sprite {
     this.setTexture('slime');
     this.setFrame(1);
     this.setPosition(x, y);
+    scene.add.existing(this).play('slimeIdle');
     this.alive = true;
   }
 }

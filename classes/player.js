@@ -7,13 +7,13 @@ export default class player extends sprite {
     this.setTexture("player");
     this.setFrame(1);
     this.setPosition(x, y);
-
+    scene.add.existing(this).play('playerIdle');;
     this.alive = true;
   }
   
   slash() {
     let slash_damage = 30;
-    player.damageTaken(slash_damage);
+    player.damage(slash_damage);
   }
 }
 
