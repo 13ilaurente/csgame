@@ -17,6 +17,13 @@ export default class gameScene extends Phaser.Scene {
       repeat: -1
     });
 
+    // Player idle animation //
+    this.anims.create({
+      key: 'playerSlash', // name of animation
+      frames: this.anims.generateFrameNames('player', {start: 40, end: 52}),
+      frameRate: 8,
+    });
+
     // Slime idle animation //
     this.anims.create({
       key: 'slimeIdle', // name of animation

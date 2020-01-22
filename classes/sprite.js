@@ -11,18 +11,18 @@ export default class sprite extends Phaser.GameObjects.Sprite {
     this.type = type;
   }
 
-  damageDone(amount) {
-    this.hp -= amount;
-  }
-  
-  damage(dmg) {
-    let dmg = slash();
-    var target = this.type === "user" ? enemies : user;
-
-    if (target && this.alive) {
-      target.damageDone(dmg);
+    damageDone(amount) {
+      this.hp -= amount;
     }
-  }
+    
+    damage(dmg) {
+      let dmg = slash();
+      var target = this.type === "user" ? enemies : user;
+
+      if (target && this.alive) {
+        target.damageDone(dmg);
+      }
+    }
 }
 
 /*
