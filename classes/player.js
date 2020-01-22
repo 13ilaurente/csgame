@@ -13,9 +13,9 @@ export default class player extends sprite {
   }
 
   slash(dmg) {
+    //this.play('slimeIdle');
     let slash_damage = 30;
     return slash_damage;
-    console.log(damage);
   }
 }
 
