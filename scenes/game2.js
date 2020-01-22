@@ -108,7 +108,6 @@ export default class gameScene extends Phaser.Scene {
         slashButton.setTint(0xff0000);
         console.log('slash sleceted');
         console.log(my_player.slash());
-        
     });
 
     let fireBallButton = this.add.text(132, 135, 'FIRE BALL', {fontFamily: 'Arial', fontSize: 10}).setResolution(14).setInteractive();
