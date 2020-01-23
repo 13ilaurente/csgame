@@ -138,7 +138,7 @@ export default class gameScene extends Phaser.Scene {
     });
     fireBallButton.on('pointerdown', function (pointer) {
         fireBallButton.setTint(0xff0000);
-        console.log('slash sleceted');
+        console.log('fire ball sleceted');
         my_player.fireBall();
         console.log(my_player.fireBall());
     });
@@ -171,7 +171,7 @@ export default class gameScene extends Phaser.Scene {
     });
     blockButton.on('pointerdown', function (pointer) {
         blockButton.setTint(0xff0000);
-        console.log('slash sleceted');
+        console.log('block sleceted');
         my_player.block();
         console.log(my_player.block());
     });
