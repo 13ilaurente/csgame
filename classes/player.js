@@ -25,6 +25,10 @@ export default class player extends sprite {
     let slash_damage = 30;
     return slash_damage;
   }
+  
+  fireBall(dmg) {
+    this.play("playerFireBall");
+  }
 }
 
 /*

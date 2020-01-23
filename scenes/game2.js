@@ -17,10 +17,17 @@ export default class gameScene extends Phaser.Scene {
       repeat: -1
     });
 
-    // Player idle animation //
+    // Player slash animation //
     this.anims.create({
       key: 'playerSlash', // name of animation
-      frames: this.anims.generateFrameNames('player', {start: 40, end: 52}),
+      /frames: this.anims.generateFrameNames('player', {start: 40, end: 52}),
+      frameRate: 8,
+    });
+
+    // Player Fire Ball animation //
+    this.anims.create({
+      key: 'playerFireBall', // name of animation
+      frames: this.anims.generateFrameNames('player', {start: 85, end: 93}),
       frameRate: 8,
     });
 
@@ -116,6 +123,18 @@ export default class gameScene extends Phaser.Scene {
 
     let fireBallButton = this.add.text(132, 135, 'FIRE BALL', {fontFamily: 'Arial', fontSize: 10}).setResolution(14).setInteractive();
     fireBallButton.setVisible(false);
+    fireBallButton.on('pointerover', function (pointer) {
+        fireBallButton.setTint(0x44ff44);
+    });
+    fireBallButton.on('pointerout', function (pointer) {
+        fireBallButton.clearTint();
+    });
+    fireBallButton.on('pointerdown', function (pointer) {
+        fireBallButton.setTint(0xff0000);
+        console.log('slash sleceted');
+        my_player.fireBall();
+        console.log(my_player.fireBall());
+    });
 
     // Defend button //
     let defendTextButton = this.add.text(19, 140, 'DEFEND', {fontFamily: 'Arial', fontSize: 10}).setResolution(14).setInteractive();
