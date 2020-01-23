@@ -29,6 +29,10 @@ export default class player extends sprite {
   fireBall(dmg) {
     this.play("playerFireBall");
   }
+
+  block() {
+    this.play('playerBlock');
+  }
 }
 
 /*
