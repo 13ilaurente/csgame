@@ -20,12 +20,12 @@ export default class player extends sprite {
     }
   }
 
-  slash(dmg) {
+  slash() {
     this.play("playerSlash");
     let slash_damage = 30;
-    opponent.damage(slash_damage);
+    /*opponent.damage(slash_damage);
     console.log(this.hp);
-    //return slash_damage;
+    return slash_damage;*/
   }
   
   fireBall(dmg) {

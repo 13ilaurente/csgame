@@ -97,63 +97,37 @@ export default class gameScene extends Phaser.Scene {
 
     // Attack button //
     let attackTextButton = this.add.text(20, 120, 'ATTACK', {fontFamily: 'Arial', fontSize: 10}).setResolution(14).setInteractive();
-
-    attackTextButton.on('pointerover', function (pointer) {
-        attackTextButton.setTint(0x44ff44);
-    });
-    attackTextButton.on('pointerout', function (pointer) {
-        attackTextButton.clearTint();
-    });
+    this.buttonOptionsColour(attackTextButton);
     attackTextButton.on('pointerdown', function (pointer) {
-        attackTextButton.setTint(0xff0000);
-        blockButton.setVisible(false);
-        slashButton.setVisible(true);
-        fireBallButton.setVisible(true);
-        console.log('attack selected')
-    });
+      blockButton.setVisible(false);
+      slashButton.setVisible(true);
+      fireBallButton.setVisible(true);
+      console.log('attack selected')
+    })
 
     // Attack options //
     let slashButton = this.add.text(140, 120, 'SLASH', {fontFamily: 'Arial', fontSize: 10}).setResolution(14).setInteractive();
     slashButton.setVisible(false);
-    slashButton.on('pointerover', function (pointer) {
-        slashButton.setTint(0x44ff44);
-    });
-    slashButton.on('pointerout', function (pointer) {
-        slashButton.clearTint();
-    });
+    this.buttonOptionsColour(slashButton);
     slashButton.on('pointerdown', function (pointer) {
-        slashButton.setTint(0xff0000);
-        console.log('slash sleceted');
+        console.log('block sleceted');
         my_player.slash();
         console.log(my_player.slash());
     });
 
     let fireBallButton = this.add.text(132, 135, 'FIRE BALL', {fontFamily: 'Arial', fontSize: 10}).setResolution(14).setInteractive();
     fireBallButton.setVisible(false);
-    fireBallButton.on('pointerover', function (pointer) {
-        fireBallButton.setTint(0x44ff44);
-    });
-    fireBallButton.on('pointerout', function (pointer) {
-        fireBallButton.clearTint();
-    });
+    this.buttonOptionsColour(fireBallButton);
     fireBallButton.on('pointerdown', function (pointer) {
-        fireBallButton.setTint(0xff0000);
-        console.log('fire ball sleceted');
+        console.log('block sleceted');
         my_player.fireBall();
         console.log(my_player.fireBall());
     });
 
     // Defend button //
     let defendTextButton = this.add.text(19, 140, 'DEFEND', {fontFamily: 'Arial', fontSize: 10}).setResolution(14).setInteractive();
-
-    defendTextButton.on('pointerover', function (pointer) {
-        defendTextButton.setTint(0x44ff44);
-    });
-    defendTextButton.on('pointerout', function (pointer) {
-        defendTextButton.clearTint();
-    });
+    this.buttonOptionsColour(defendTextButton);
     defendTextButton.on('pointerdown', function (pointer) {
-        defendTextButton.setTint(0xff0000);
         slashButton.setVisible(false);
         fireBallButton.setVisible(false);
         blockButton.setVisible(true);
@@ -163,17 +137,23 @@ export default class gameScene extends Phaser.Scene {
     // Defend options //
     let blockButton = this.add.text(140, 120, 'BLOCK', {fontFamily: 'Arial', fontSize: 10}).setResolution(14).setInteractive();
     blockButton.setVisible(false);
-    blockButton.on('pointerover', function (pointer) {
-        blockButton.setTint(0x44ff44);
-    });
-    blockButton.on('pointerout', function (pointer) {
-        blockButton.clearTint();
-    });
+    this.buttonOptionsColour(blockButton);
     blockButton.on('pointerdown', function (pointer) {
-        blockButton.setTint(0xff0000);
         console.log('block sleceted');
         my_player.block();
         console.log(my_player.block());
+    });
+  }
+
+  buttonOptionsColour(buttonName) {
+    buttonName.on('pointerover', function (pointer) {
+        buttonName.setTint(0x44ff44);
+    });
+    buttonName.on('pointerout', function (pointer) {
+        buttonName.clearTint();
+    });
+    buttonName.on('pointerdown', function (pointer) {
+        buttonName.setTint(0xff0000);
     });
   }
 }
