@@ -29,7 +29,8 @@ export default class menuScene extends Phaser.Scene {
     // Option Button to go to options //     
     this.optionButton = this.add.sprite(138, 110, 'menuSpriteSheet').setInteractive().setFrame(4);
     this.optionButton.on('pointerover', function (pointer) {
-      //console.log('It is working');
+      console.log('success');
+      this.add.text(136, 40, 'test');
     });
 
     this.optionButton.on('pointerdown', function (pointer) {
