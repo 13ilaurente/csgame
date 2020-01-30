@@ -22,10 +22,7 @@ export default class player extends sprite {
 
   slash() {
     this.play("playerSlash");
-    let slash_damage = 30;
-    /*opponent.damage(slash_damage);
-    console.log(this.hp);
-    return slash_damage;*/
+    
   }
   
   fireBall(dmg) {
@@ -41,12 +38,10 @@ export default class player extends sprite {
 export default class player extends Phaser.GameObjects.Sprite {
   constructor(scene, x, y, hp, mana, score) {
     super(scene, x, y, hp, mana,);
-
     this.setTexture('player');
     this.setFrame(1);
     this.setPosition(x, y);
   }
-
   create() {
     function test1() {
       console.log('success')

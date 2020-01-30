@@ -15,27 +15,38 @@ export default class menuScene extends Phaser.Scene {
 
   create() {
     // Background image //
+    /*
     this.background = this.add.image(0, 0, "mountain-background");
-    this.background.setOrigin(0, 0); 
+    this.background.setOrigin(0, 0);
+    */
+    let background = this.add.image(0, 0, "mountain-background");
+    background.setOrigin(0, 0); 
 
     // Play button to start game //
-    this.playButton = this.add.sprite(136, 80, 'menuSpriteSheet').setInteractive();
-    this.playButton.on('pointerdown', function (pointer) {
+    let playButton = this.add.sprite(136, 80, 'menuSpriteSheet').setInteractive();
+    playButton.on('pointerdown', function (pointer) {
       this.scene.switch('gameScene');
-      //this.scene.launch('uiScene');
       console.log('switched to game scene');
+    }.bind(this)); 
+    playButton.on('pointerover', function (pointer) {
+      let playHelp = this.add.text(136, 135, 'Click to begin fighting!', {fontFamily: 'Arial', fontSize: 10}).setOrigin(0.5);
+      playButton.on('pointerout', function (pointer) {
+        playHelp.destroy();
+      }.bind(this));
     }.bind(this));
     
-    // Option Button to go to options //     
-    this.optionButton = this.add.sprite(138, 110, 'menuSpriteSheet').setInteractive().setFrame(4);
-    this.optionButton.on('pointerover', function (pointer) {
-      console.log('success');
-      this.add.text(136, 40, 'test');
-    });
-
-    this.optionButton.on('pointerdown', function (pointer) {
+    // Option Button to go to options //   
+    
+    let optionButton = this.add.sprite(138, 110, 'menuSpriteSheet').setInteractive().setFrame(4);
+    optionButton.on('pointerdown', function (pointer) {
       this.scene.switch('optionsScene');
       console.log('switched to option scene')
+    }.bind(this));
+    optionButton.on('pointerover', function (pointer) {
+      let optionHelp = this.add.text(136, 135, 'Change settings and preferences of the game', {fontFamily: 'Arial', fontSize: 10}).setOrigin(0.5);
+      optionButton.on('pointerout', function (pointer) {
+        optionHelp.destroy();
+      }.bind(this));
     }.bind(this));
 
     // Play fall animation //

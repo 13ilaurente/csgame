@@ -5,28 +5,47 @@ export default class optionsScene extends Phaser.Scene {
 
   create() {
     // background tinted based on what scene //
-    this.background = this.add.image(0, 0, "mountain-background").setTint(0x336666);
-    this.background.setOrigin(0, 0);
+    let background = this.add.image(0, 0, "mountain-background").setTint(0x336666);
+    background.setOrigin(0, 0); 
 
-    this.homeButton = this.add.sprite(136, 76, 'menuSpriteSheet').setInteractive().setFrame(8);
-    this.homeButton.on('pointerdown', function (pointer) {
+    // Home button //
+    let homeButton = this.add.sprite(136, 76, 'menuSpriteSheet').setInteractive().setFrame(8);
+    homeButton.on('pointerdown', function (pointer) {
       this.scene.switch('menuScene');
-      console.log('switched to menu scene');
+      console.log('switched to option scene')
+    }.bind(this));
+    homeButton.on('pointerover', function (pointer) {
+      let homeHelp = this.add.text(136, 135, 'Return to the main menu', {fontFamily: 'Arial', fontSize: 10}).setOrigin(0.5);
+      homeButton.on('pointerout', function (pointer) {
+        homeHelp.destroy();
+      }.bind(this));
     }.bind(this));
 
     // Fullscreen button //
-    this.fullScreenButton = this.add.sprite(138, 110, 'menuSpriteSheet').setInteractive().setFrame(6);
-    this.fullScreenButton.on('pointerdown', function (pointer) {
+    let fullScreenButton = this.add.sprite(138, 110, 'menuSpriteSheet').setInteractive().setFrame(6);
+    fullScreenButton.on('pointerdown', function (pointer) {
       if (this.scale.isFullscreen) {
         this.scale.stopFullscreen();
-        this.fullScreenButton.setFrame(6);
+        fullScreenButton.setFrame(6);
         console.log('exited fullscreen')
       } else {
         this.scale.startFullscreen();
-        this.fullScreenButton.setFrame(7);
+        fullScreenButton.setFrame(7);
         console.log('entered fullscreen')   
       }
     }, this);
+    /*
+    fullScreenButton.on('pointerover', function (pointer) {
+      if (fullScreenButton.setFrame(6) === true) {
+        let fullScreenHelp = this.add.text(136, 135, 'Test1', {fontFamily: 'Arial', fontSize: 10}).setOrigin(0.5);
+      } else {
+        let fullScreenHelp = this.add.text(136, 135, 'Test2', {fontFamily: 'Arial', fontSize: 10}).setOrigin(0.5);
+      }
+      fullScreenButton.on('pointerout', function (pointer) {
+        fullScreenHelp.destroy();
+      }.bind(this));
+    }.bind(this));
+    */
   }
 }
 

@@ -62,6 +62,11 @@ export default class gameScene extends Phaser.Scene {
     let opponent = new enemy(this, 180, 90, randHP, 100);
     enemies.push(opponent);
 
+    /*
+    my_player.hp = my_player.hp - 10;
+    console.log(my_player.hp);
+    */
+
     console.log('player alive check:' + my_player.alive);
     console.log(user);
     console.log(enemies);
@@ -110,7 +115,7 @@ export default class gameScene extends Phaser.Scene {
     slashButton.setVisible(false);
     this.buttonOptionsColour(slashButton);
     slashButton.on('pointerdown', function (pointer) {
-        console.log('block sleceted');
+        console.log('slash sleceted');
         my_player.slash();
         console.log(my_player.slash());
     });
@@ -119,7 +124,7 @@ export default class gameScene extends Phaser.Scene {
     fireBallButton.setVisible(false);
     this.buttonOptionsColour(fireBallButton);
     fireBallButton.on('pointerdown', function (pointer) {
-        console.log('block sleceted');
+        console.log('fire ball sleceted');
         my_player.fireBall();
         console.log(my_player.fireBall());
     });
@@ -146,7 +151,7 @@ export default class gameScene extends Phaser.Scene {
   }
 
   turn() {
-    
+    // statements for turn based system
   }
 
   buttonOptionsColour(buttonName) {
